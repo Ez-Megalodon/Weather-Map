@@ -4,7 +4,7 @@ async function getFiveDayWeatherData () {
     try {
         let response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${currentCityArr[1]}&lon=${currentCityArr[0]}&units=imperial&appid=${OPEN_WEATHER_APPID}`);
         let data = await response.json();
-        console.log('-----------------five day-------------------');
+        console.log('--------five day--------');
         console.log(data);
         return data;
 
@@ -18,7 +18,7 @@ async function getCurrentWeatherData () {
     try {
         let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${currentCityArr[1]}&lon=${currentCityArr[0]}&units=imperial&appid=${OPEN_WEATHER_APPID}`);
         let data = await response.json();
-        console.log('----------------current day------------------');
+        console.log('--------current day--------');
         console.log(data);
         return data;
 

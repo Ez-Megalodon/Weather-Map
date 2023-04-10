@@ -1,5 +1,6 @@
 //CURRENT CITY ARRAY
 let currentCityArr = [-98.495141 , 29.4246];//default coords (San Antonio, TX)
+
 // CREATE A VARIABLE TO HOLD THE  PREVIOUS MARKER
 let previousMarker = null;
 
