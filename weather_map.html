@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <script src="js/keys.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/weather_map.css">
+
+</head>
+<body>
+<div class="page-wrapper">
+<!--    HEADER-->
+    <header class="container">
+        <div class="row justify-center align-center">
+            <div class="column shrink flex-direction-row">
+                <div class="column shrink justify-center align-center">
+                    <img src="https://i.gifer.com/68J.gif" alt="sunny gif" class="header-gif">
+                </div>
+                <div class="column justify-center align-center shrink header-name">
+                    <h1>Ezra's Weather Map</h1>
+                </div>
+                <div class="column shrink justify-center align-center">
+                    <img src="https://i.gifer.com/Cbd.gif" alt="rainy-gif" class="header-gif">
+                </div>
+            </div>
+        </div>
+    </header>
+<!--    MAIN-->
+    <main class="container">
+<!--      CURRENT WEATHER SCENE-->
+        <div class="row bg-row">
+            <div class="column justify-center align-center" id="current-weather-card">
+
+            </div>
+            <div class="column grow search-bar-column">
+                <!--            MAP DIV-->
+                <div id='map' style='width: 100%; height: 100%;'></div>
+                <form>
+                    <!--         SEARCH BAR-->
+                    <label for="searchbar"></label>
+                    <input type="text" name="searchbar" id="searchbar" placeholder="Enter city or address">
+                    <button id="search-bar-button">GO</button>
+                    <img src="https://www.kindacode.com/wp-content/uploads/2020/12/search.png" id="search-glass" alt="magnifying glass icon">
+                </form>
+            </div>
+        </div>
+<!--        ACCORDION-->
+        <div class="row grow justify-center bg-row">
+            <div class="column accordion">
+                <button type="button" class="accordion-button">Four Day Forecast</button>
+                <!--        5-DAY FORECAST CARDS-->
+                <div class="row accordion-content" id="forecast-row">
+
+                </div>
+            </div>
+        </div>
+<!--        INTERACTIVE MAP-->
+        <div class="row">
+
+        </div>
+    </main>
+</div>
+
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/weather_map_utils.js"></script>
+<script src="js/weather_map.js"></script>
+</body>
+</html>
